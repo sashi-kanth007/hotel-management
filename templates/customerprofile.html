@@ -1,0 +1,22 @@
+{% block content %}
+<h1>CUSTOMER DETAILS</h1>
+<div>
+    <p>Your details are below:</p>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>{{ account['first_name'] }}</td>
+        </tr>
+  <tr>
+            <td>Aadharnumber:</td>
+            <td>{{ account['aadhar_number'] }}</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>{{ account['age'] }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ url_for('index') }}" style="text-decoration: none;"> Back to Home page</a>
+</div>
+{% endblock %}

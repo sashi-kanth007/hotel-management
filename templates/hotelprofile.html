@@ -1,0 +1,22 @@
+{% block content %}
+<h1>HOTEL DETAILS</h1>
+<div>
+    <p>Your details are below:</p>
+    <table>
+        <tr>
+            <td>Hotel Name:</td>
+            <td>{{ account['hotel_name'] }}</td>
+        </tr>
+  <tr>
+            <td>Admin-id:</td>
+            <td>{{ account['admin_id'] }}</td>
+        </tr>
+        <tr>
+            <td>Admin contact number:</td>
+            <td>{{ admin['phone_number'] }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ url_for('index') }}" style="text-decoration: none;"> Back to Home page</a>
+</div>
+{% endblock %}

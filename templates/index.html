@@ -1,0 +1,45 @@
+{% block content %}
+ 
+
+<head>
+    <title>Hotel reservation system</title>
+    <link href="{{ url_for('static', filename='css/mainstyle.css') }}" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-hotel-vacation-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png">
+</head>
+
+<body>
+<div class="head">
+<h1 class="heading">Hotel reservation system</h1>
+</div>
+
+<div class="main">
+<div class="First">
+    <a class="one" href="{{ url_for('customer') }}">Add Customer details</a>
+</div>
+
+<div class="First">
+    <a class="two" href="{{ url_for('Hotel') }}">Add Hotel details</a>
+</div>
+
+<div class="First">
+    <a class="one" href="{{ url_for('Admin') }}">Add Admin details</a>
+</div>
+<div class="First">
+    <a class="two" href="{{ url_for('amenities') }}">Add Amenities details</a>
+</div>
+</div>
+<div class="main-1">
+    <div class="second">
+        <a href="{{ url_for('changenum') }}">Add Phonenumber</a>
+    </div>
+
+    <div class="second">
+        <a href="{{ url_for('hotelcity') }}">Search Hotels</a>
+    </div>
+
+    <div class="second">
+        <a href="{{ url_for('addcolumn') }}">Add Column</a>
+    </div>
+</div>
+</body>
+{% endblock %}

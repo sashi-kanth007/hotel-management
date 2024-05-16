@@ -1,0 +1,37 @@
+{% block content %}
+<head>
+  <meta charset="utf-8">
+  <title>Add phonenumber</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/changenum.css') }}">
+</head>  
+
+<h1>Add Phone number</h1>
+
+<form action="{{ url_for('changenum') }}" method="post" autocomplete="off">
+
+<label id="Aadhar">Enter Aadhar Number :</label>
+<input type="number" name="Aadhar" placeholder="xxxx-xxxx-xxxx" required>
+
+<label id="Pno">Enter Phone Number :</label>
+<input type="number" name="Pno" placeholder="Enter Phonenumber" required>
+
+{% with messages = get_flashed_messages()  %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+{{ message }}
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div>
+<input type="submit">
+</div>
+
+
+</form>
+
+{% endblock %}

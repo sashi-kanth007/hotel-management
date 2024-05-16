@@ -1,0 +1,26 @@
+{% block content %}
+<h1>AMENITIES DETAILS</h1>
+<div>
+    <p>Your  details are below:</p>
+    <table>
+        <tr>
+            <td>Amenity:</td>
+            <td>{{ account['amen_name'] }}</td>
+        </tr>
+  <tr>
+            <td>Hotel-id:</td>
+            <td>{{ account['hotel_id'] }}</td>
+        </tr>
+        <tr>
+            <td>Start time:</td>
+            <td>{{ account['start_time'] }}</td>
+        </tr>
+        <tr>
+            <td>End time:</td>
+            <td>{{ account['end_time'] }}</td>
+        </tr>
+    </table>
+    
+    <a href="{{ url_for('index') }}" style="text-decoration: none;"> Back to Home page</a>
+</div>
+{% endblock %}

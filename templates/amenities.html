@@ -1,0 +1,59 @@
+{% block content %}
+
+<head>
+    <title>Amenities details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/amenities.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link rel="icon" href="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-gym-hotel-service-becris-lineal-color-becris.png">
+</head>
+
+<body>
+
+<div class="con">
+    <div class="brand-logo"></div>
+    <div class="brand-title">AMENITIES</div>
+    <div class="inputs">
+      <form action="{{ url_for('amenities') }}" method="post" autocomplete="off">
+          <div>
+              <label id="Amenname">Amenity Name: </label>
+              <input name="Amenname" type="text" placeholder="Enter Amenity" required>
+          </div>
+          <div>
+              <label id="Stime">Start time: </label>
+              <input name="Stime" type="time"  >
+          </div>
+          <div>
+            <label id="Etime">End time: </label>
+            <input name="Etime" type="time"  >
+          </div>
+          <div>
+              <label id="Hotelid">Hotel Id: </label>
+              <input name="Hotelid" type="number" placeholder="Enter Id" required>
+          </div>
+          <div class="form-group ">
+            {% with messages = get_flashed_messages()  %}
+            {% if messages %}
+            {% for message in messages %}
+  
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div>
+                <input type="submit" value="Continue">
+            </div>
+          </div>
+    </div>
+  </div>
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+{% endblock %}
